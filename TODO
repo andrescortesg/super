@@ -1,0 +1,158 @@
+{
+    'status': 200, 
+    'response':  #####
+    {
+        'accounts_info': None, 
+        'acquirer_reconciliation': [], 
+        'additional_info': 
+        {
+            'authentication_code': None, 
+            'available_balance': None, 
+            'ip_address': '0.0.0.0', 
+            'nsu_processadora': None
+        }, 
+        'authorization_code': None, 
+        'binary_mode': False, 
+        'brand_id': None, 
+        'build_version': '3.44.0', 
+        'call_for_authorize_id': None, 
+        'callback_url': 'http://191.104.18.197:5000', 
+        'captured': True, 
+        'card': {}, 
+        'charges_details': 
+        [
+            {
+                'accounts': 
+                {
+                    'from': 'collector', 
+                    'to': 'mp'
+                }, 
+                'amounts': 
+                {
+                    'original': 1030.4, 
+                    'refunded': 0
+                }, 
+                'client_id': 0, 
+                'date_created': '2024-03-27T01:13:54.000-04:00', 
+                'id': '1322089703-001', 
+                'last_updated': '2024-03-27T01:13:54.000-04:00', 
+                'metadata': {}, 
+                'name': 'mercadopago_fee', 
+                'refund_charges': [], 
+                'reserve_id': None, 
+                'type': 'fee'
+            }
+        ], 
+        'collector_id': 500074833, 
+        'corporation_id': None, 
+        'counter_currency': None, 
+        'coupon_amount': 0, 
+        'currency_id': 'COP', 
+        'date_approved': '2024-03-27T01:14:02.243-04:00', 
+        'date_created': '2024-03-27T01:13:54.194-04:00', 
+        'date_last_updated': '2024-03-27T01:14:02.243-04:00', 
+        'date_of_expiration': None, 
+        'deduction_schema': None, 
+        'description': 'carro2 ', 
+        'differential_pricing_id': None, 
+        'external_reference': None, 
+        'fee_details': 
+        [
+            {
+                'amount': 1030.4, 
+                'fee_payer': 'collector', 
+                'type': 'mercadopago_fee'
+            }
+        ], 
+        'financing_group': None, 
+        'id': 1322089703, 
+        'installments': 1, 
+        'integrator_id': None, 
+        'issuer_id': '1037', 
+        'live_mode': False, 
+        'marketplace_owner': None, 
+        'merchant_account_id': None, 
+        'merchant_number': None, 
+        'metadata': {}, 
+        'money_release_date': '2024-03-27T01:14:02.243-04:00', 
+        'money_release_schema': None, 
+        'money_release_status': 'released', 
+        'net_amount': None, 
+        'notification_url': None, 
+        'operation_type': 'regular_payment', 
+        'order': {}, 
+        'payer': 
+        {
+            'identification': 
+            {
+                'number': '32659430', 
+                'type': 'DNI'
+            }, 
+            'entity_type': None, 
+            'phone': 
+            {
+                'number': None, 
+                'extension': None, 
+                'area_code': None
+            }, 
+            'last_name': None, 
+            'id': '1735226249', 
+            'type': None, 
+            'first_name': None, 
+            'email': 'test_user_80507629@testuser.com'
+        }, 
+        'payment_method': 
+        {
+            'id': 'pse', 
+            'issuer_id': '1037', 
+            'type': 'bank_transfer'
+        }, 
+        'payment_method_id': 'pse', 
+        'payment_type_id': 'bank_transfer', 
+        'platform_id': None, 
+        'point_of_interaction': 
+        {
+            'business_info': 
+            {
+                'branch': None, 
+                'sub_unit': 'sdk', 
+                'unit': 'online_payments'
+            }, 
+            'type': 'UNSPECIFIED'
+        }, 
+        'pos_id': None, 
+        'processing_mode': 'aggregator', 
+        'refunds': [], 
+        'shipping_amount': 0, 
+        'sponsor_id': None, 
+        'statement_descriptor': None, 
+        'status': 'approved', 
+        'status_detail': 'accredited', 
+        'store_id': None, 
+        'tags': None, 
+        'taxes': 
+        [
+            {
+                'type': 'IVA', 
+                'value': None
+            }
+        ], 
+        'taxes_amount': 0, 
+        'transaction_amount': 2000, 
+        'transaction_amount_refunded': 0, 
+        'transaction_details': 
+        {
+            'acquirer_reference': None, 
+            'bank_transfer_id': 241766, 
+            'external_resource_url': 'https://www.mercadopago.com.co/sandbox/payments/1322089703/bank_transfer?caller_id=1735226249&hash=0b602446-78f4-4345-9a6f-6fffe9c54cdb', 
+            'financial_institution': '1019', 
+            'installment_amount': 0, 
+            'net_received_amount': 969.6, 
+            'overpaid_amount': 0, 
+            'payable_deferral_period': None, 
+            'payment_method_reference_id': None, 
+            'total_paid_amount': 2000, 
+            'transaction_id': '10045927'
+            }
+        }
+    }

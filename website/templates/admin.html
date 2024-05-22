@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Admin
+{% endblock %}
+
+{% block content %}
+    <div class="container mt-5">
+        <form action={{ url_for('auth.admin_logout') }}>
+            <input type="submit" class="btn btn-primary" value="Cerrar sesion" />
+        </form>
+    </div>
+
+    <div class="container mt-2 mb-2">
+        <form method="POST">
+            <h3 align="center">Crear Sorteo</h3>
+            <div class="form-group">
+                <label for="lot">
+                Sorteo
+                </label>
+                <input 
+                    type="text" 
+                    class="form-control" 
+                    id="lot" 
+                    name="lot" 
+                    placeholder="Descripcion de sorteo"
+                />
+            </div>
+            <div class="form-group">
+                <label for="lot">
+                Precio
+                </label>
+                <input 
+                    type="number" 
+                    class="form-control" 
+                    id="t_price" 
+                    name="t_price" 
+                    placeholder="Precio de boleta"
+                />
+            </div>
+            
+            <br />
+            <button type="submit" class="btn btn-primary">Ingresar</button>
+        </form>
+    </div>
+
+    <div class="container">
+
+        <h2>Usuarios</h2>
+        <p>Formato: id -- nombre -- email</p>
+        {% for user in users %}
+            <p>{{ user.id }} -- {{ user.name }} -- {{ user.email }}</p>
+        {% endfor %}
+            <h2>Sorteos</h2>
+            <p>Formato: id -- precio de boleta -- descripción del premio </p>
+        {% for lot in lots %}
+            <p>{{ lot.id }} -- {{ lot.t_price }} -- {{ lot.prize }} -- {{ lot.t_price }}</p>
+        {% endfor %}
+            <h2>Boletas</h2>
+            <p>Formato: id -- id de comprador -- id de sorteo -- numero de boleta/p>
+        {% for ticket in tickets %}
+            <p>{{ ticket.id }} -- {{ ticket.user_id }} -- {{ ticket.lot_id }} -- {{ ticket.tick }} </p>
+        {% endfor %}
+            <h2>ADMINISTRADORES</h2>
+            <p>Formato: id -- administrador</p>
+        {% for ad in admins %}
+            <p>{{ ad.id }} -- {{ ad.login }} </p>
+        {% endfor %}
+    
+    </div>
+{% endblock %}

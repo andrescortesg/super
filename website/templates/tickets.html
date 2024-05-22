@@ -1,0 +1,67 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Comprar Boleta
+{% endblock %}
+
+{% block content %}
+<form method="POST">
+    <h3 align="center" class="mt-5 mb-5">Registra tus datos</h3>
+    <div class="form-group">
+        <label for="email">
+            Correo Electronico
+        </label>
+        <input 
+            type="email" 
+            class="form-control" 
+            id="email" 
+            name="email" 
+            placeholder="Correo"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="name">
+            Nombre Completo
+        </label>
+        <input 
+            type="text" 
+            class="form-control" 
+            id="name" 
+            name="name" 
+            placeholder="Nombre Completo"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="contact">
+            Numero de Celular
+        </label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="contact" 
+            name="contact" 
+            placeholder="Celular"
+        />
+    </div>
+
+    <div class="form-group">
+        <label for="amount">
+            Cantidad de boletas (maximo 20 boletas)
+        </label>
+        <input 
+            type="number" 
+            class="form-control" 
+            id="amount" 
+            name="amount" 
+            min="1"
+            max="20"
+            placeholder="#"
+        />
+    </div>
+
+    <br />
+    <button type="submit" class="btn btn-primary">Comprar boleta</button>
+</form>
+{% endblock %}

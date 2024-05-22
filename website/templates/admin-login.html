@@ -1,0 +1,19 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Admin-login
+{% endblock %}
+
+{% block content %}
+    <div class="container">
+        <form method="POST">
+            <div class="form-group">
+                Login: <input type="text" class="form-control" id="login" name="login" placeholder="Nombre de usuario" >
+            </div>
+            <div class="form-group">
+                Contraseña: <input type="password" class="form-control" id="password" name="passwd" placeholder="Contraseña" >
+            </div>    
+            <button type="submit" class="btn btn-primary">Login</button>
+        </form>
+    </div>
+{% endblock %}

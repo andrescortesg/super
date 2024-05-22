@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %}
+Pago PSE
+{% endblock %}
+
+{% block content %}
+<div class="container mt-5">
+    <h3>Ingresa tus datos</h3>
+</div>
+<div class="container">
+    <h4>Pago por PSE</h4>
+</div>
+<div class="container mt-5">
+    <form id="form-checkout" method="POST">
+        <div class="btn-group btn-group-toggle mb-2" data-toggle="buttons">
+            <label class="btn btn-secondary active">
+                <input type="radio" name="options" id="2" value="2" autocomplete="off" checked="checked" />2 Boletas
+            </label>
+
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="5" value="5" autocomplete="off" /> 5 Boletas
+            </label>
+
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="10" value="10" autocomplete="off" /> 10 Boletas
+            </label>
+
+            <label class="btn btn-secondary">
+                <input type="radio" name="options" id="20" value="20" autocomplete="off" /> 20 Boletas
+            </label>
+        </div>
+        <!--
+        <div class="form-group">
+            <label for="zipCode">Codigo Postal</label>
+            <input id="form-checkout__zipCode" name="zipCode" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="streetName">Street Name</label>
+            <input id="form-checkout__streetName" name="streetName" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="streetNumber">Street Number</label>
+            <input id="form-checkout__streetNumber" name="streetNumber" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="neighborhood">Neighborhood</label>
+            <input id="form-checkout__neighborhood" name="neighborhood" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="city">Ciudad</label>
+            <input id="form-checkout__city" name="city" type="text" class="form-control">
+        </div class="form-group">
+
+        <div class="form-group">
+            <label for="phoneAreaCode">PhoneAreaCode</label>
+            <input id="form-checkout__phoneAreaCode" name="phoneAreaCode" type="text" class="form-control">
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNumber">PhoneNumber</label>
+            <input id="form-checkout__phoneNumber" name="phoneNumber" type="text" class="form-control">
+        </div>
+        -->
+        <div class="form-group">
+            <label for="name">Nombre</label>
+            <input id="form-checkout__name" name="name" type="text" class="form-control" placeholder="Nombre Completo">
+        </div>
+        <div class="form-group">
+            <label for="email">Correo Electronico</label>
+            <input id="form-checkout__email" name="email" type="text" class="form-control" placeholder="Email">
+        </div>
+
+        <div class="form-group">
+            <label for="phoneNumber">Número de telefono celular</label>
+            <input id="form-checkout__phoneNumber" name="phoneNumber" type="number" class="form-control" placeholder="Número de telefono">
+        </div>
+
+        <div class="form-group">
+            <label for="personType">Tipo de persona</label>
+            <select id="form-checkout__personType" name="personType" type="email" class="form-control">
+            <option value="natural">Natural</option>
+            <option value="juridica">Jurídica</option>
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="identificationType">Tipo de documento</label>
+            <select id="form-checkout__identificationType" name="identificationType" type="text" class="form-control">
+            </select>
+        </div>
+
+        <div class="form-group">
+            <label for="identificationNumber">Número del documento</label>
+            <input id="form-checkout__identificationNumber" name="identificationNumber" type="number" class="form-control" placeholder="Número de documento">
+        </div>
+
+        <div class="form-group">
+            <div class="form-group">
+                <label for="banksList">Banco</label>
+                <div id="banksList"></div> 
+            </div>
+        </div>
+
+        <div>
+            <input type="hidden" name="transactionAmount" id="transactionAmount" value="100">
+            <input type="hidden" name="description" id="description" value="Nome do Produto">
+            <br>
+            <button type="submit"  class="btn btn-primary">Pagar</button>
+        </div>
+    </form>
+</div>
+<div class="container mt-5">
+    <p>Al ingresar sus datos usted acepta las<a href="https://www.pse.com/es/pages/privacy"> políticas de privacidad de PSE</a></p>
+</div>
+<script src="{{ url_for('static', filename='this_shit.js') }}"></script>
+{% endblock %}

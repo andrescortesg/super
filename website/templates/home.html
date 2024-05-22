@@ -1,0 +1,117 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Inicio
+{% endblock %}
+
+{% block content %}
+<h1 align="center" class="mt-5 mb-5">TITULO VA AQUI</h1>
+<!-- CONTAINER -- 2 FOR EACH ROW -->
+    <div class="container">
+
+        <div class="row">
+            <div class="col-lg">
+                <a href="{{ url_for('pse.pse_payment', lot_id=1) }}" 
+                    type="submit" 
+                    name="lot_3" 
+                    id="lot_3">
+                    <!-- boton para seleccionar tiquete -->
+                    <img src="/static/horse_picture.png"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boleta 2"
+                        id="lot_2"
+                    >  
+                </a>
+            </div>
+
+            <div class="col-lg">
+                <a href="{{ url_for('pse.pse_payment', lot_id=2) }}" 
+                    type="submit" 
+                    name="lot_3" 
+                    id="lot_3">
+                    <!-- boton para seleccionar tiquete -->
+                    <img src="/static/horse_picture.png"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boleta 2"
+                        id="lot_2"
+                    >  
+                </a>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-lg">
+                <a href="{{ url_for('pse.pse_payment', lot_id=3) }}" 
+                    type="submit" 
+                    name="lot_3" 
+                    id="lot_3">
+                    <!-- boton para seleccionar tiquete -->
+                    <img src="/static/horse_picture.png"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boleta 2"
+                        id="lot_2"
+                    >  
+                </a>
+            </div>
+
+            <div class="col-lg">
+                <a href="{{ url_for('pse.pse_payment', lot_id=4) }}" 
+                    type="submit" 
+                    name="lot_3" 
+                    id="lot_3">
+                    <!-- boton para seleccionar tiquete -->
+                    <img src="/static/horse_picture.png"
+                        class="w-100 shadow-1-strong rounded mb-4"
+                        alt="Boleta 2"
+                        id="lot_2"
+                    >  
+                </a>
+            </div>
+
+        </div>
+    </div>
+        <script src="https://sdk.mercadopago.com/js/v2">
+            window.paymentBrickController.unmount()
+        </script>
+{% endblock %}
+
+            <!--
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+
+                <div>
+                    <a href="{{ url_for('pse.pse_payment', lot_id=1) }}" 
+                        type="submit" 
+                        name="lot_1" 
+                        id="lot_1">
+                        
+                        <p>yee</p>
+                        <img src="/static/horse_picture.png"
+                            class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Boleta 1"
+                            id="lot_1"
+                        >  
+                    </a>
+                </div>
+
+                <div>
+                    <a href="{{ url_for('pse.pse_payment', lot_id=2) }}" 
+                        type="submit" 
+                        name="lot_2" 
+                        id="lot_2">
+                    
+                        <p>yee</p>
+                        <img src="/static/horse_picture.png"
+                            class="w-100 shadow-1-strong rounded mb-4"
+                            alt="Boleta 2"
+                            id="lot_2"
+                        >  
+                    </a>
+                </div>
+
+              
+            </div>
+
+            <div class="col-lg-4 col-md-12 mb-4 mb-lg-0">
+            
+            </div>
+        -->

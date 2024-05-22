@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %}
+    Consultar Numero
+{% endblock %}
+
+{% block content %}
+    <form method="POST">
+        <h3 align="center" class="container mt-5">Chequea tus boletas</h3>
+        <div class="form-group">
+            <label for="email">
+                Correo Electronico
+            </label>
+            <input 
+                type="email" 
+                class="form-control" 
+                id="email" 
+                name="email" 
+                placeholder="Ingresa el correo"
+            />
+        </div>
+        <br />
+        <button type="submit" class="btn btn-primary">Chequear</button>
+    </form>
+    <div class="container-fluid mt-4 ml-3">
+        {% for row in db_search %}
+            <p>{{ row.Ticket.tick }}</p>
+        {% endfor %}
+    </div>
+{% endblock %}
