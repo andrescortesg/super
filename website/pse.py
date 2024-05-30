@@ -10,7 +10,7 @@ from requests import get
 pse = Blueprint('pse', __name__)
 
 # access key goes here
-sdk = mercadopago.SDK("TEST-5542925550970812-031621-7f29c9cd0e3b7d5a8558cc2ce06d8e44-500074833")
+sdk = mercadopago.SDK("TEST")
 
 # payment process with PSE starts here
 @pse.route('/process_payment', methods=['GET', 'POST'])
